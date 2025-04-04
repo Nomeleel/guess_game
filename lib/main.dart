@@ -265,7 +265,7 @@ class _GamePageState extends State<GamePage> {
               ),
               child: GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: MediaQuery.of(context).size.width ~/ 500,
+                  crossAxisCount: max(MediaQuery.of(context).size.width ~/ 500, 1),
                   mainAxisExtent: 45,
                 ),
                 itemCount: logs.length,
