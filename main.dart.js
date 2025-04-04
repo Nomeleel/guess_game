@@ -76533,7 +76533,7 @@ for(r=0;r<4;++r){i=A.ea("\u7532\u4e59\u4e19\u4e01"[r],j,j,j,B.d2,j,j)
 h[r]=new A.oT(1,B.eQ,A.ai1(new A.c9(B.id,A.lZ(A.b([i,B.xt,A.ea("?",j,j,j,B.xP,j,j)],s),B.aS,B.aO,B.bg),j)),j)}i=A.W1(A.pV(h,B.aS,B.aO,B.bg),1)
 p=A.ahQ(B.Gw)
 o=A.aeo(20)
-n=B.c.d2(A.bm(a,j,t.w).w.a.a,500)
+n=Math.max(B.c.d2(A.bm(a,j,t.w).w.a.a,500),1)
 m=k.r.length
 l=!0
 l=l?B.ym:j
