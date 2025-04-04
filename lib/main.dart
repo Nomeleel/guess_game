@@ -263,20 +263,20 @@ class _GamePageState extends State<GamePage> {
                 border: Border.all(color: Colors.grey),
                 borderRadius: BorderRadius.circular(20),
               ),
-              child: GridView.count(
-                crossAxisCount: 3,
-                children: logs.reversed
-                    .map(
-                      (log) => ListTile(
-                        title: Text(
-                          log,
-                          style: const TextStyle(
-                            fontSize: 20,
-                          ),
-                        ),
-                      ),
-                    )
-                    .toList(),
+              child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: MediaQuery.of(context).size.width ~/ 500,
+                  mainAxisExtent: 45,
+                ),
+                itemCount: logs.length,
+                itemBuilder: (context, index) => ListTile(
+                  title: Text(
+                    logs[logs.length - index - 1],
+                    style: const TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
